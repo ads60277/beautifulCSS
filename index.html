@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="h-20 w-full flex justify-center shadow">
+        <div class="h-full w-2/5 flex items-center">
+            <div><a href="">
+                    <i class="fa-solid fa-mug-hot text-amber-400 fa-2xl"></i>
+                </a></div>
+        </div>
+        <div class="h-full w-2/5 flex items-center justify-around">
+            <div class="mr-6 cursor-pointer bannerLink"><a class="decoration-auto">Home</a></div>
+            <div class="mr-6 cursor-pointer bannerLink"><a>About</a></div>
+            <div class="mr-6 cursor-pointer bannerLink"><a>Menu</a></div>
+            <div class="mr-6 cursor-pointer bannerLink"><a>Gallery</a></div>
+            <div class="mr-6 cursor-pointer bannerLink"><a>Team</a></div>
+            <div class="mr-6 cursor-pointer bannerLink"><a>Contact</a></div>
+        </div>
+    </div>
+    <nav>
+        <div class="nav_box">
+            <h2>Coffee Heaven</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quia quos, aliquid quae enim dolore
+                ipsum tempora amet voluptates maiores explicabo dicta incidunt
+            <div class="btn bg-amber-400">
+                <a href="">
+                    About Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Array.from(document.querySelector('.bannerLink').children).forEach(input => {
+        //         input.addEventListener('click', (e) => {
+        //             Array.from(input.parentElement.children).forEach(cancel => {
+        //                 cancel.firstChild.classList.remove('text-amber-400')
+        //             })
+        //             e.target.classList.add('text-amber-400')
+        //         })
+        //     })
+            document.querySelectorAll('.bannerLink').forEach(input => {
+                input.addEventListener('click', (e) => {
+                    e.target.classList.add('text-amber-400')
+                })
+            })
+
+    </script>
+</body>
+
+</html>
