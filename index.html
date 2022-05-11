@@ -8,54 +8,59 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {},
+                    height: {
+                        '80%': '80%'
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-
-    <div class="h-20 w-full flex justify-center shadow">
-        <div class="h-full w-2/5 flex items-center">
-            <div><a href="">
-                    <i class="fa-solid fa-mug-hot text-amber-400 fa-2xl"></i>
-                </a></div>
+    <section class="sticky top-0 bg-white">
+        <div class="h-20 w-full m-auto container flex justify-center">
+            <div class="h-full w-2/5 flex items-center ml-4">
+                <div>
+                    <a href="">
+                        <i class="fa-solid fa-mug-hot text-amber-400 fa-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="h-full bannerLink w-2/5 flex items-center justify-end text-lg text-stone-500 ">
+                <li class="mr-6 fir cursor-pointer"><a class="decoration-auto">Home</a></li>
+                <li class="mr-6 cursor-pointer"><a>About</a></li>
+                <li class="mr-6 cursor-pointer"><a>Menu</a></li>
+                <li class="mr-6 cursor-pointer"><a>Gallery</a></li>
+                <li class="mr-6 cursor-pointer"><a>Team</a></li>
+                <li class="mr-6 cursor-pointer"><a>Contact</a></li>
+            </ul>
         </div>
-        <div class="h-full w-2/5 flex items-center justify-around">
-            <div class="mr-6 cursor-pointer bannerLink"><a class="decoration-auto">Home</a></div>
-            <div class="mr-6 cursor-pointer bannerLink"><a>About</a></div>
-            <div class="mr-6 cursor-pointer bannerLink"><a>Menu</a></div>
-            <div class="mr-6 cursor-pointer bannerLink"><a>Gallery</a></div>
-            <div class="mr-6 cursor-pointer bannerLink"><a>Team</a></div>
-            <div class="mr-6 cursor-pointer bannerLink"><a>Contact</a></div>
-        </div>
-    </div>
-    <nav>
-        <div class="nav_box">
-            <h2>Coffee Heaven</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quia quos, aliquid quae enim dolore
-                ipsum tempora amet voluptates maiores explicabo dicta incidunt
-            <div class="btn bg-amber-400">
-                <a href="">
-                    About Us
-                </a>
+    </section>
+    <nav class="h-screen w-full">
+        <div class="nav_box h-80% w-full relative">
+            <div class="absolute bottom-0 left-0 h-60 w-80 border border-red-300">
+                <h2>Coffee Heaven</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quia quos, aliquid quae enim dolore
+                    ipsum tempora amet voluptates maiores explicabo dicta incidunt
+                    <a href="" class="btn bg-yellow-700">
+                        About Us
+                    </a>
             </div>
         </div>
     </nav>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
     <script>
-        // Array.from(document.querySelector('.bannerLink').children).forEach(input => {
-        //         input.addEventListener('click', (e) => {
-        //             Array.from(input.parentElement.children).forEach(cancel => {
-        //                 cancel.firstChild.classList.remove('text-amber-400')
-        //             })
-        //             e.target.classList.add('text-amber-400')
-        //         })
-        //     })
-            document.querySelectorAll('.bannerLink').forEach(input => {
-                input.addEventListener('click', (e) => {
-                    e.target.classList.add('text-amber-400')
-                })
-            })
-
+        $('.bannerLink > li').on('click', function (e) {
+            $('.bannerLink> li').removeClass('text-amber-400')
+            $(this).addClass('text-amber-400')
+        })
     </script>
 </body>
 

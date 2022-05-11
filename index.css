@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav_box {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(70%, transparent)), url(./images/home-bg.jpg) no-repeat;
+  background: linear-gradient(90deg, #fff, transparent 70%), url(./images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=index.css.map */
