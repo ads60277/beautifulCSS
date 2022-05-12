@@ -12,9 +12,51 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {},
+                    colors: {
+                        'main-color': '#be9c79',
+                        'main-black': '#333',
+                        'main-white': '#fff',
+                        'main-light-color': '#666',
+                        'border': '.2rem solid var(--black)',
+                        'box-shadow': '0 .5rem 1rem rgba(0,0,0,.1)',
+                    },
+                    width: {
+                        '34': '8.5rem',
+                        '10%': '10%',
+                        '20%': '20%',
+                        '25%': '25%',
+                        '30%': '30%',
+                        '40%': '40%',
+                        '50%': '50%',
+                        '60%': '60%',
+                        '70%': '70%',
+                        '80%': '80%',
+                        '90%': '90%',
+                        '95%': '95%',
+                        '1/8': '12.5%'
+                    },
                     height: {
-                        '80%': '80%'
+                        '5%': '5%',
+                        '10%': '10%',
+                        '20%': '20%',
+                        '30%': '30%',
+                        '40%': '40%',
+                        '50%': '50%',
+                        '60%': '60%',
+                        '70%': '70%',
+                        '80%': '80%',
+                        '85%': '85%',
+                        '90%': '90%',
+                        '95%': '95%',
+                        '700': '700px'
+                    },
+                    fontFamily: {
+                        'sans': ['ui-sans-serif', 'system-ui'],
+                        'serif': ['ui-serif', 'Georgia'],
+                        'mono': ['ui-monospace', 'SFMono-Regular'],
+                        'display': ['Oswald'],
+                        'body': ['"Open Sans"'],
+                        'Merienda': ['Merienda One']
                     }
                 }
             }
@@ -23,44 +65,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-<body>
-    <section class="sticky top-0 bg-white">
-        <div class="h-20 w-full m-auto container flex justify-center">
+<body style="height:200vh">
+    <header class="sticky top-0 z-10 bg-white">
+        <div class="h-20 w-full m-auto container flex justify-center p-4">
             <div class="h-full w-2/5 flex items-center ml-4">
-                <div>
-                    <a href="">
-                        <i class="fa-solid fa-mug-hot text-amber-400 fa-2xl"></i>
-                    </a>
-                </div>
+                <a class="h-full" href="">
+                    <img class="w-full h-full" src="./images/logo.png" alt="">
+                </a>
             </div>
-            <ul class="h-full bannerLink w-2/5 flex items-center justify-end text-lg text-stone-500 ">
-                <li class="mr-6 fir cursor-pointer"><a class="decoration-auto">Home</a></li>
-                <li class="mr-6 cursor-pointer"><a>About</a></li>
-                <li class="mr-6 cursor-pointer"><a>Menu</a></li>
-                <li class="mr-6 cursor-pointer"><a>Gallery</a></li>
-                <li class="mr-6 cursor-pointer"><a>Team</a></li>
-                <li class="mr-6 cursor-pointer"><a>Contact</a></li>
+            <ul class="h-full bannerLink w-2/5 flex items-center justify-end text-lg text-main-black text-xl ease-linear">
+                <li class="mr-6 cursor-pointer"><a href="#home">Home</a></li>
+                <li class="mr-6 cursor-pointer"><a href="#about">About</a></li>
+                <li class="mr-6 cursor-pointer"><a href="#menu">Menu</a></li>
+                <li class="mr-6 cursor-pointer"><a href="#Gallery">Gallery</a></li>
+                <li class="mr-6 cursor-pointer"><a href="#Team">Team</a></li>
+                <li class="mr-6 cursor-pointer"><a href="#Contact">Contact</a></li>
             </ul>
         </div>
-    </section>
-    <nav class="h-screen w-full">
-        <div class="nav_box h-80% w-full relative">
-            <div class="absolute bottom-0 left-0 h-60 w-80 border border-red-300">
-                <h2>Coffee Heaven</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quia quos, aliquid quae enim dolore
-                    ipsum tempora amet voluptates maiores explicabo dicta incidunt
-                    <a href="" class="btn bg-yellow-700">
-                        About Us
-                    </a>
+    </header>
+    <div class="h-700 w-full" id="home">
+        <section class="nav_box h-full w-full relative">
+            <div class="absolute p-center h-60 w-25% flex flex-col items-center justify-around">
+                <h2 class="font-Merienda text-6xl text-center font-bold text-main-black w-full">Coffee Heaven</h2>
+                <p class="w-full text-center text-main-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quia quos, aliquid quae enim dolore
+                </p>
+                <a href="" class="btn bg-main-color text-main-white text-center text-lg w-34 py-2">
+                    About Us
+                </a>
+            </div>
+        </section>
+    </div>
+    <section id="about" class="w-full flex justify-center">
+        <div class="about_box flex grid gap-16 grid-cols-2 text-start w-60%">
+            <div class="w-full">
+                <img src="./images/about-img.svg" alt="">
+            </div>
+            <div class="w-full flex flex-col items-start justify-center text-start">
+                <h2 class="font-Merienda text-4xl font-bold text-main-black w-full">A Cup Of Coffee Can <br> Complete Your Day</h2>
+                <p class="w-full text-main-black my-4">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Veniam Suscipit Sunt Repellendus, Dolorum Recusandae Placeat Quae. Iste Eaque Aspernatur, Animi Deleniti Voluptas, Sunt Molestias Eveniet Sint Consectetur Facere A Ex.</p>
+                <a href="" class="btn bg-main-color text-main-white text-center text-lg w-34 py-2">
+                    Oru Menu
+                </a>
             </div>
         </div>
-    </nav>
+    </section>
+    <section id="menu" class="h-screen bg-green-300">
+    </section>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
     <script>
         $('.bannerLink > li').on('click', function (e) {
             $('.bannerLink> li').removeClass('text-amber-400')
             $(this).addClass('text-amber-400')
         })
+        // let t = 0
+        // setInterval(() => {
+        //     t += 1
+        //     console.log(t);
+        //     if (t == 10) {
+        //         window.alert('get out')
+        //     }
+        // }, 1000);
+        // window.addEventListener('click', () => {
+        //     t = 0
+        // })
+        // window.addEventListener('keydown', () => {
+        //     t = 0
+        // })
     </script>
 </body>
 
