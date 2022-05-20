@@ -1,40 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
-*{
+
+* {
     font-family: 'Nunito', sans-serif;
-    margin:0; padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border:none;
+    outline: solid;
+    border: none;
     text-decoration: none;
     text-transform: capitalize;
- }
-.nav_box{
-    background:linear-gradient(90deg, #fff, transparent 70%), url(./images/home-bg.jpg) no-repeat;
+}
+.btn{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 0 0 ;
+    padding: 10px 30px;
+    background-color: #be9c79;
+    word-wrap: normal;
+}
+
+#home {
+    background: linear-gradient(90deg, #fff, transparent 70%), url(./images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
-section {
-    padding: 3rem 2rem;
-    min-width: 1200px;
+.limit {
+    padding: 30px 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
-.p-center{
-    top: 35%;
-    left: 20%;
-}
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     height: .5rem;
     width: .65rem;
- }
- 
- ::-webkit-scrollbar-track{
+}
+
+::-webkit-scrollbar-track {
     background-color: transparent;
- }
- 
- ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #be9c79;
- }
- html{
+}
+
+html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6.5rem;
- }
+}

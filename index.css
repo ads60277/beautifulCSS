@@ -5,28 +5,33 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: none;
+  outline: solid;
   border: none;
   text-decoration: none;
   text-transform: capitalize;
 }
 
-.nav_box {
+.btn {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  margin: 10px 0 0;
+  padding: 10px 30px;
+  background-color: #be9c79;
+  word-wrap: normal;
+}
+
+#home {
   background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(70%, transparent)), url(./images/home-bg.jpg) no-repeat;
   background: linear-gradient(90deg, #fff, transparent 70%), url(./images/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-section {
-  padding: 3rem 2rem;
-  min-width: 1200px;
+.limit {
+  padding: 30px 20px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.p-center {
-  top: 35%;
-  left: 20%;
 }
 
 ::-webkit-scrollbar {
