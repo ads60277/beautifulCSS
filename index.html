@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -67,6 +68,8 @@
                         base: ['15px', '25px'],
                         lg: ['20px', '30px'],
                         xl: ['25px', '35px'],
+                        '5xl': ['3rem',1.5],
+                        '4xl': ['2.25rem','3.5rem'],
                         '40': '40px'
                     }
                 }
@@ -97,7 +100,7 @@
     <nav id="home">
         <div class="limit h-700 flex items-center">
             <div class="h-225 w-500 flex flex-col items-center justify-around">
-                <h3 class="font-Merienda text-6xl text-center font-bold text-main-black h-full w-full flex items-center justify-center">Coffee Heaven</h3>
+                <h3 class="font-Merienda md:text-6xl text-4xl text-center font-bold text-main-black h-full w-full flex items-center justify-center">Coffee Heaven</h3>
                 <p class="w-full text-center text-main-black leading-loose py-3 font-Nunito">Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Ut Officia, Accusantium Mollitia Laudantium Dolorum Dolore.
                 </p>
                 <a href="" class="btn">
@@ -112,11 +115,11 @@
                 <img src="./images/about-img.svg" alt="">
             </div>
             <div class="text-start h-1/2 w-full flex flex-col justify-center">
-                <h2 class="font-Merienda lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-main-black w-full pb-2">A Cup Of Coffee Can complete Your Day</h2>
-                <p class="text-main-light py-2 text-xs sm:text-base sm:leading-8">
+                <h2 class="font-Merienda lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-main-black w-full pb-2 mb-2 leading-normal">A Cup Of Coffee Can complete Your Day</h2>
+                <p class="text-main-light py-2 mb-2 text-xs sm:text-base sm:leading-8">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam suscipit sunt repellendus, dolorum recusandae placeat quae. Iste eaque aspernatur, animi deleniti voluptas, sunt molestias eveniet sint consectetur facere a ex.
                 </p>
-                <a href="" class="btn w-25% md:text-base text-sm">
+                <a href="" class="btn w-30% lg:text-lg text-base text-center">
                     our menu
                 </a>
             </div>
@@ -128,7 +131,7 @@
                 <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
                 <h3 class="font-Merienda text-40 font-bold text-main-black">Our Facility</h3>
             </div>
-            <div class="grid grid-cols-4 gap-2">
+            <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2">
                 <div class="box">
                     <img src="./images/icon-1.png" alt="" class="m-auto">
                     <h3 class="text-lg text-main-black font-Nunito text-center my-3">Varieties Of Coffees</h3>
@@ -152,13 +155,14 @@
             </div>
         </div>
     </section>
+
     <section>
-        <div class="limit">
+        <div class="limit" id="menu">
             <div class="text-center mb-8">
                 <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
-                <h3 class="font-Merienda text-40 font-bold text-main-black">Our Facility</h3>
+                <h3 class="font-Merienda text-40 font-bold text-main-black">Popular Menu</h3>
             </div>
-            <div class="grid grid-cols-3 gap-6 px-28">    
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12 ">
                 <div class="box">
                     <img src="./images/menu-1.png" alt="" class="w-full">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Love You Coffee</h3>
@@ -183,8 +187,118 @@
                     <img src="./images/menu-6.png" alt="" class="w-full">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Love Heart Coffee</h3>
                 </div>
+            </div>
+    </section>
+
+    <section id="Gallery">
+        <div class="limit" >
+            <div class="text-center mb-8">
+                <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
+                <h3 class="font-Merienda text-40 font-bold text-main-black">Our Gallery</h3>
+            </div>
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12">
+                <div class="box">
+                    <img src="./images/gallery-1.webp" alt="" class="w-full">
+                </div>
+                <div class="box">
+                    <img src="./images/gallery-2.webp" alt="" class="w-full">
+                </div>
+                <div class="box">
+                    <img src="./images/gallery-3.webp" alt="" class="w-full">
+                </div>
+                <div class="box">
+                    <img src="./images/gallery-4.webp" alt="" class="w-full">
+                </div>
+                <div class="box">
+                    <img src="./images/gallery-5.webp" alt="" class="w-full">
+                </div>
+                <div class="box">
+                    <img src="./images/gallery-6.webp" alt="" class="w-full">
+                </div>
+            </div>
+    </section>
+    <section  id="Team">
+        <div class="limit">
+            <div class="text-center mb-8">
+                <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
+                <h3 class="font-Merienda text-40 font-bold text-main-black">Our Team</h3>
+            </div>
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12">
+                <div class="box">
+                    <img src="./images/our-team-1.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+                <div class="box">
+                    <img src="./images//our-team-2.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+                <div class="box">
+                    <img src="./images//our-team-3.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+                <div class="box">
+                    <img src="./images//our-team-4.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+                <div class="box">
+                    <img src="./images//our-team-5.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+                <div class="box">
+                    <img src="./images//our-team-6.jpg" alt="" class="w-full">
+                    <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
+                </div>
+            </div>
+    </section>
+    <section  id="Contact">
+        <div class="limit block md:flex text-start items-center gap-10 p-0">
+            <div class="w-full" style="max-width: 100%;">
+                <img src="./images/contact-img.svg" alt="">
+            </div>
+            <div class="text-start h-1/2 md:w-2/3 w-full flex flex-col justify-center items-center p-5 border-2 border-main-black">
+                <h2 class="font-Nunito text-lg md:text-xl text-main-black w-full text-center mb-4 font-bold">Book A Table</h2>
+                <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-5 border-2 border-main-black font-normal" type="text" name="" id="" placeholder="Enter Your Name">
+                <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-5 border-2 border-main-black font-normal" type="text" name="" id="" placeholder="Enter Your Number">
+                <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-3 border-2 border-main-black font-normal" type="number" name="" id="" placeholder="How Many Guests">
+                <a href="" class="btn w-44 md:w-48 w-40 md:text-lg text-base text-center">
+                    send message
+                </a>
+            </div>
         </div>
     </section>
+    <footer>
+        <div class="limit">
+            <div class="flex py-6 px-4 grid gap-2 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 text-center md:text-base text-sm font-Nunito text-main-light">
+                <li class="list-none">
+                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-envelope"></i></div>
+                    <h4 class="text-lg text-main-black mb-2">Our Email</h4>
+                    <p class="mb-2">Shaikhanas@Gmail.Com</p>
+                    <p class="mb-2">Anasbhai@Gmail.Com</p>
+                </li>
+                <li class="list-none">
+                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-clock"></i></div>
+                    <h4 class="text-lg text-main-black mb-2">Opening Hours</h4>
+                    <p class="mb-2">07:00am To 09:00pm</p>
+                    <p class="mb-2"></p>
+                </li>
+                <li class="list-none">
+                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-map-marker-alt"></i></div>
+                    <h4 class="text-lg text-main-black mb-2">Shop Location</h4>
+                    <p class="mb-2">Mumbai, India - 400104</p>
+                    <p class="mb-2"></p>
+                </li>
+                <li class="list-none">
+                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-phone"></i></div>
+                    <h4 class="text-lg text-main-black mb-2">Our Number</h4>
+                    <p class="mb-2">+123-456-7890</p>
+                    <p class="mb-2">+111-222-3333</p>
+                </li>
+            </div>
+            <div class="border-t-2 border-main-black pt-5 mt-6 text-center">
+                <h4 class="text-lg">© Copyright @ 2022 By <span class="text-main-color"> Mr. Web Designer</span> | All Rights Reserved!</h4>
+            </div>
+        </div>
+    </footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
     <script>
         $('.bannerLink > li').on('click', function (e) {
