@@ -68,8 +68,8 @@
                         base: ['15px', '25px'],
                         lg: ['20px', '30px'],
                         xl: ['25px', '35px'],
-                        '5xl': ['3rem',1.5],
-                        '4xl': ['2.25rem','3.5rem'],
+                        '5xl': ['3rem', 1.5],
+                        '4xl': ['2.25rem', '3.5rem'],
                         '40': '40px'
                     }
                 }
@@ -87,7 +87,7 @@
                     <img class="w-45" src="./images/logo.png" alt="">
                 </a>
             </div>
-            <ul class="bannerLink flex items-center text-main-black text-xl ease-linear">
+            <ul class="bannerLink flex items-center text-main-black text-lg ease-linear hidden md:flex">
                 <a class="cursor-pointer ml-5" href="#home">Home</a>
                 <a class="cursor-pointer ml-5" href="#about">About</a>
                 <a class="cursor-pointer ml-5" href="#menu">Menu</a>
@@ -95,7 +95,19 @@
                 <a class="cursor-pointer ml-5" href="#Team">Team</a>
                 <a class="cursor-pointer ml-5" href="#Contact">Contact</a>
             </ul>
+            <div class="bannerburder flex items-center md:hidden">
+                <i class="fa-solid fa-xl fa-bars"></i>
+                <i class="fa-solid fa-x fa-lg hidden"></i>
+            </div>
         </div>
+        <ul class="barlist hidden border">
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#home">Home</a></div>
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#about">About</a></div>
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#menu">Menu</a></div>
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#Gallery">Gallery</a></div>
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#Team">Team</a></div>
+            <div><a class="cursor-pointer block px-5 py-2 font-Nunito text-main-black hover:text-main-color" href="#Contact">Contact</a></div>
+        </ul>
     </header>
     <nav id="home">
         <div class="limit h-700 flex items-center">
@@ -191,7 +203,7 @@
     </section>
 
     <section id="Gallery">
-        <div class="limit" >
+        <div class="limit">
             <div class="text-center mb-8">
                 <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
                 <h3 class="font-Merienda text-40 font-bold text-main-black">Our Gallery</h3>
@@ -217,7 +229,7 @@
                 </div>
             </div>
     </section>
-    <section  id="Team">
+    <section id="Team">
         <div class="limit">
             <div class="text-center mb-8">
                 <img src="./images/heading-img.png" alt="" class="h-10 m-0 mb-2 inline">
@@ -250,7 +262,7 @@
                 </div>
             </div>
     </section>
-    <section  id="Contact">
+    <section id="Contact">
         <div class="limit block md:flex text-start items-center gap-10 p-0">
             <div class="w-full" style="max-width: 100%;">
                 <img src="./images/contact-img.svg" alt="">
@@ -304,6 +316,33 @@
         $('.bannerLink > li').on('click', function (e) {
             $('.bannerLink> li').removeClass('text-amber-400')
             $(this).addClass('text-amber-400')
+        })
+        $('.fa-x').on('click', () => {
+            $('.barlist').toggle('.3', "linear")
+            $('.fa-x').hide()
+            $('.fa-bars').show(0, function () {
+                $('.fa-bars').css("transition", ".3s")
+                $('.fa-bars').css("transform", "rotate(0deg)")
+                $('.fa-x').css("transform", "rotate(0deg)")
+            })
+        })
+        $('.fa-bars').on('click', () => {
+            $('.barlist').toggle('.3', "linear")
+            $('.fa-bars').hide()
+            $('.fa-x').show(0, function () {
+                $('.fa-x').css("transition", ".3s")
+                $('.fa-x').css("transform", "rotate(90deg)")
+                $('.fa-bars').css("transform", "rotate(90deg)")
+            })
+        })
+        $(window).on('resize', () => {
+            if ($(window).width() > 768) {
+                $('.barlist').hide()
+                $('.fa-bars').css("transform", "rotate(0deg)")
+                $('.fa-x').css("transform", "rotate(0deg)")
+                $('.fa-x').hide()
+                $('.fa-bars').show()
+            }
         })
     </script>
 </body>
