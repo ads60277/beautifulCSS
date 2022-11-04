@@ -5,78 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeautyCss</title>
+    <link rel="icon" href="./images/logo.png">
+    <title>Coffee Heaven</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'main-color': '#be9c79',
-                        'main-black': '#333',
-                        'main-white': '#fff',
-                        'main-light': '#666',
-                        'border': '.2rem solid var(--black)',
-                        'box-shadow': '0 .5rem 1rem rgba(0,0,0,.1)',
-                    },
-                    width: {
-                        '34': '8.5rem',
-                        '45': '45px',
-                        '500': '500px',
-                        '10%': '10%',
-                        '20%': '20%',
-                        '25%': '25%',
-                        '30%': '30%',
-                        '40%': '40%',
-                        '50%': '50%',
-                        '60%': '60%',
-                        '70%': '70%',
-                        '80%': '80%',
-                        '90%': '90%',
-                        '95%': '95%',
-                        '1/8': '12.5%'
-                    },
-                    height: {
-                        '225': "225px",
-                        '5%': '5%',
-                        '10%': '10%',
-                        '20%': '20%',
-                        '30%': '30%',
-                        '40%': '40%',
-                        '50%': '50%',
-                        '60%': '60%',
-                        '70%': '70%',
-                        '80%': '80%',
-                        '85%': '85%',
-                        '90%': '90%',
-                        '95%': '95%',
-                        '700': '700px'
-                    },
-                    fontFamily: {
-                        'sans': ['ui-sans-serif', 'system-ui'],
-                        'serif': ['ui-serif', 'Georgia'],
-                        'mono': ['ui-monospace', 'SFMono-Regular'],
-                        'display': ['Oswald'],
-                        'body': ['"Open Sans"'],
-                        'Merienda': ['Merienda One'],
-                        'Nunito': ['Nunito']
-                    },
-                    fontSize: {
-                        sm: ['12px', '20px'],
-                        base: ['15px', '25px'],
-                        lg: ['20px', '30px'],
-                        xl: ['25px', '35px'],
-                        '5xl': ['3rem', 1.5],
-                        '4xl': ['2.25rem', '3.5rem'],
-                        '40': '40px'
-                    }
-                }
+    <script src="./tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          
+            .teamCard {
+                @apply before:w-full before:h-full before:hidden hover:before:flex relative before:absolute before:p-2 before:backdrop-blur-sm before:transition-all before:duration-500 before:text-gray-300 before:text-lg before:justify-center before:items-center before:text-center before:content-['Lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit._Deleniti_vel_suscipit,_dolorem_et_modi_pariatur'] before:font-Merienda lg:before:text-2xl
+            }
+            .btnanimaiton {
+                @apply relative after:transition-all after:absolute after:top-0 after:bottom-0 after:left-0 after:h-full after:w-0 hover:after:w-full after:bg-hover-main-color 
             }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      </style>
 </head>
 
 <body style="height:500vh">
@@ -115,8 +60,8 @@
                 <h3 class="font-Merienda md:text-6xl text-4xl text-center font-bold text-main-black h-full w-full flex items-center justify-center">Coffee Heaven</h3>
                 <p class="w-full text-center text-main-black leading-loose py-3 font-Nunito">Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Ut Officia, Accusantium Mollitia Laudantium Dolorum Dolore.
                 </p>
-                <a href="" class="btn">
-                    About Us
+                <a href="" class="btn btnanimaiton">
+                    <span class="z-10 relative top-0 left-0">About Us</span>
                 </a>
             </div>
         </div>
@@ -124,15 +69,19 @@
     <section id="about">
         <div class="limit block md:flex text-start items-center gap-10">
             <div class="w-full">
-                <img src="./images/about-img.svg" alt="">
+                <img class="fromleft" src="./images/about-img.svg" alt="">
             </div>
-            <div class="text-start h-1/2 w-full flex flex-col justify-center">
-                <h2 class="font-Merienda lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-main-black w-full pb-2 mb-2 leading-normal">A Cup Of Coffee Can complete Your Day</h2>
-                <p class="text-main-light py-2 mb-2 text-xs sm:text-base sm:leading-8">
+            <div class="text-start h-1/2 w-full flex flex-col justify-center ">
+                <div class=" lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-main-black w-full pb-2 mb-2 leading-normal">
+                    <h2 class="font-Merienda fromtop">A Cup Of Coffee Can complete Your Day</h2>
+                </div>
+                <p class="text-main-light py-2 mb-2 text-xs sm:text-base sm:leading-8 h-1/3 fromright">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam suscipit sunt repellendus, dolorum recusandae placeat quae. Iste eaque aspernatur, animi deleniti voluptas, sunt molestias eveniet sint consectetur facere a ex.
                 </p>
-                <a href="" class="btn w-30% lg:text-lg text-base text-center">
-                    our menu
+                <a href="" class="btn btnanimaiton w-30% lg:text-lg text-base text-center h-1/3 frombottom">
+                    <span class="z-10 relative top-0 left-0">
+                        our menu
+                    </span>
                 </a>
             </div>
         </div>
@@ -176,27 +125,27 @@
             </div>
             <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12 ">
                 <div class="box">
-                    <img src="./images/menu-1.png" alt="" class="w-full">
+                    <img src="./images/menu-1.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Love You Coffee</h3>
                 </div>
                 <div class="box">
-                    <img src="./images/menu-2.png" alt="" class="w-full">
+                    <img src="./images/menu-2.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Cappuccino</h3>
                 </div>
                 <div class="box">
-                    <img src="./images/menu-3.png" alt="" class="w-full">
+                    <img src="./images/menu-3.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Mocha Coffee</h3>
                 </div>
                 <div class="box">
-                    <img src="./images/menu-4.png" alt="" class="w-full">
+                    <img src="./images/menu-4.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Frappuccino</h3>
                 </div>
                 <div class="box">
-                    <img src="./images/menu-5.png" alt="" class="w-full">
+                    <img src="./images/menu-5.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Black Coffee</h3>
                 </div>
                 <div class="box">
-                    <img src="./images/menu-6.png" alt="" class="w-full">
+                    <img src="./images/menu-6.png" alt="" class="w-full hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out">
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">Love Heart Coffee</h3>
                 </div>
             </div>
@@ -209,22 +158,22 @@
                 <h3 class="font-Merienda text-40 font-bold text-main-black">Our Gallery</h3>
             </div>
             <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12">
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-1.webp" alt="" class="w-full">
                 </div>
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-2.webp" alt="" class="w-full">
                 </div>
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-3.webp" alt="" class="w-full">
                 </div>
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-4.webp" alt="" class="w-full">
                 </div>
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-5.webp" alt="" class="w-full">
                 </div>
-                <div class="box">
+                <div class="box frombottom">
                     <img src="./images/gallery-6.webp" alt="" class="w-full">
                 </div>
             </div>
@@ -236,28 +185,40 @@
                 <h3 class="font-Merienda text-40 font-bold text-main-black">Our Team</h3>
             </div>
             <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:px-28 px-12">
-                <div class="box">
-                    <img src="./images/our-team-1.jpg" alt="" class="w-full">
+                <div class="box ">
+                    <div class="teamCard zoominout">
+                        <img class="w-full" src="./images/our-team-1.jpg" alt="">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
                 <div class="box">
-                    <img src="./images//our-team-2.jpg" alt="" class="w-full">
+                    <div class="teamCard zoominout">
+                        <img src="./images//our-team-2.jpg" alt="" class="w-full">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
                 <div class="box">
-                    <img src="./images//our-team-3.jpg" alt="" class="w-full">
+                    <div class="teamCard zoominout">
+                        <img src="./images//our-team-3.jpg" alt="" class="w-full">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
                 <div class="box">
-                    <img src="./images//our-team-4.jpg" alt="" class="w-full">
+                    <div class="teamCard zoominout">
+                        <img src="./images//our-team-4.jpg" alt="" class="w-full">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
                 <div class="box">
-                    <img src="./images//our-team-5.jpg" alt="" class="w-full">
+                    <div class="teamCard zoominout">
+                        <img src="./images//our-team-5.jpg" alt="" class="w-full">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
                 <div class="box">
-                    <img src="./images//our-team-6.jpg" alt="" class="w-full">
+                    <div class="teamCard zoominout">
+                        <img src="./images//our-team-6.jpg" alt="" class="w-full">
+                    </div>
                     <h3 class="text-lg text-main-black font-Nunito text-center mt-3">John Deo</h3>
                 </div>
             </div>
@@ -272,7 +233,7 @@
                 <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-5 border-2 border-main-black font-normal" type="text" name="" id="" placeholder="Enter Your Name">
                 <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-5 border-2 border-main-black font-normal" type="text" name="" id="" placeholder="Enter Your Number">
                 <input class="md:text-lg text-base p-3.5 text-main-black w-full mb-3 border-2 border-main-black font-normal" type="number" name="" id="" placeholder="How Many Guests">
-                <a href="" class="btn w-44 md:w-48 w-40 md:text-lg text-base text-center">
+                <a href="" class="btn  w-44 md:w-48 w-40 md:text-lg text-base text-center">
                     send message
                 </a>
             </div>
@@ -282,7 +243,9 @@
         <div class="limit">
             <div class="flex py-6 px-4 grid gap-2 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 text-center md:text-base text-sm font-Nunito text-main-light">
                 <li class="list-none">
-                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-envelope"></i></div>
+                    <div class="rounded-full flex items-center justify-center md:w-16 w-12 md:h-16 h-12 bg-main-color m-auto mb-2"><i class="fa-2xl fas text-white fa-envelope
+                         hover:rotate-y-180 hover:transition-all
+                        "></i></div>
                     <h4 class="text-lg text-main-black mb-2">Our Email</h4>
                     <p class="mb-2">Shaikhanas@Gmail.Com</p>
                     <p class="mb-2">Anasbhai@Gmail.Com</p>
@@ -343,6 +306,54 @@
                 $('.fa-x').hide()
                 $('.fa-bars').show()
             }
+        })
+        window.addEventListener('scroll', () => {
+            let triggerBottom = window.innerHeight
+            document.querySelectorAll('.fromtop').forEach(input => {
+                const boxTop = input.getBoundingClientRect().top
+                if (boxTop < triggerBottom) {
+                    input.classList.add('animate-fromtop')
+                } else {
+                    input.classList.remove('animate-fromtop')
+                }
+            })
+            document.querySelectorAll('.fromleft').forEach(input => {
+                const boxTop = input.getBoundingClientRect().top
+                if (boxTop < triggerBottom) {
+                    input.classList.add('animate-fromleft')
+                } else {
+                    input.classList.remove('animate-fromleft')
+                }
+            })
+            document.querySelectorAll('.fromright').forEach(input => {
+                const boxTop = input.getBoundingClientRect().top
+                if (boxTop < triggerBottom) {
+                    input.classList.add('animate-fromright')
+                } else {
+                    input.classList.remove('animate-fromright')
+                }
+            })
+            document.querySelectorAll('.frombottom').forEach(input => {
+                const boxTop = input.getBoundingClientRect().top
+                if (boxTop < triggerBottom) {
+                    input.classList.add('animate-frombottom')
+                } else {
+                    input.classList.remove('animate-frombottom')
+                }
+            })
+            let zoominouttimer = 0
+            document.querySelectorAll('.zoominout').forEach(input => {
+                const boxTop = input.getBoundingClientRect().top
+                setTimeout(() => {
+                    if (boxTop < triggerBottom) {
+                        input.classList.add('animate-zoominout')
+                    } else {
+                        input.classList.remove('animate-zoominout')
+                    }
+                }, zoominouttimer);
+                zoominouttimer += 100
+                // if (zoominouttimer === 300) zoominouttimer+=300
+            })
         })
     </script>
 </body>

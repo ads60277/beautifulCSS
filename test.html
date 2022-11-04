@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .container>span {
+            margin-left: 10px;
+            position: absolute;
+            right: 0;
+            background: blue;
+            animation-name: righttoleft;
+            animation-duration: 1s;
+            animation-iteration-count: 100;
+        }
+
+        h1 {
+            position: absolute;
+            left: 0;
+            background: #f00;
+            animation-name: lefttoright;
+            animation-duration: 1s;
+            animation-iteration-count: 100;
+        }
+
+        @keyframes lefttoright {
+            from {
+                left: 50px;
+            }
+
+            to {
+                left: 100px;
+            }
+        }
+
+        @keyframes righttoleft {
+            from {
+                right: 50px;
+            }
+
+            to {
+                right: 100px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <h1>hi li-ho</h1>
+        <span>hi o-la</span>
+    </div> -->
+    <!-- <div class="wrap pt-12">
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4 -translate-x-6">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+        <div class="box bg-blue-300 h-32 w-16 p-2 mb-4">box1</div>
+        <div class="box bg-red-300  h-32 w-16 p-2 mb-4">box2</div>
+    </div> -->
+
+    <!-- <p class="
+          relative transition-all w-min-content
+          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0
+           before:bg-blue-400 
+            before:transition-all before:duration-500
+          hover:before:w-full hover:before:left-0 hover:before:bg-red-500
+          ">
+        Underline
+    </p>
+    <p
+    class="
+    relative transition-all w-min-content
+    before:h-1 before:w-0 before:top-0 before:right-0 before:bg-red-400 before:absolute
+    before:transition-all before:duration-500
+    hover:before:w-full hover:before:left-0 hover:before:bg-blue-400
+    "
+    >Underline</p>
+    <div class="bg-red-300 h-60 w-60 relative
+    before:bg-blue-300 before:w-full before:h-full before:absolute before:hidden hover:before:block">
+    </div> -->
+
+    <div class="bg-red-300 h-60 w-60 hover:scale-125 hover:duration-500 hover:transition hover:ease-in-out ease-out"></div>
+</body>
+<script>
+    (function () {
+        const h1 = document.querySelector('h1')
+        const span = document.querySelector('span');
+
+
+        // let triggerBottom = window.innerHeight
+        // document.querySelectorAll('.box').forEach(input => {
+        //     const boxTop = input.getBoundingClientRect().top
+        //     if (boxTop < triggerBottom) {
+        //         box.classList.add('show')
+        //     } else {
+        //         box.classList.remove('show')
+        //     }
+        // })
+
+    }())
+</script>
+
+</html>
